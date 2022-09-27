@@ -1,12 +1,11 @@
 import java.util.ArrayList;
 
 public class Adventure {
+    // Vi laver en variabel der hedder currentRoom for at man kan følge med i hvad for et rum man er i.
     Room currentRoom;
-    // TODO: Find ud af hvordan man får player indført her. Ville godt kunne skrive map.get også bliver indekset af map.get
-    // det rum man befinder sig i.
-    private String player;
 
     public Adventure() {
+        // Vi opretter alle rummene med deres nummer og beskrivelse.
         Room room1 = new Room(1, "Første rum");
         Room room2 = new Room(2, "Andet rum");
         Room room3 = new Room(3, "Tredje rum");
@@ -17,31 +16,35 @@ public class Adventure {
         Room room8 = new Room(8, "Ottende rum");
         Room room9 = new Room(9, "Ninende rum");
 
-
-        room1.setEast(room2);
-        room1.setSouth(room4);
-        room2.setWest(room1);
-        room2.setEast(room3);
-        room3.setWest(room2);
-        room3.setSouth(room6);
-        room4.setNorth(room1);
-        room4.setSouth(room7);
-        room5.setSouth(room8);
-        room6.setNorth(room3);
-        room6.setSouth(room9);
-        room7.setNorth(room4);
-        room7.setEast(room8);
-        room8.setWest(room7);
-        room8.setEast(room9);
-        room8.setNorth(room5);
-        room9.setWest(room8);
-        room9.setNorth(room6);
-
+// Her bruger vi vores set metode og laver forbindelserne mellem alle rummene
+        // F.eks. så siger første linje at room1's RoomEast er room2. Så hvis brugeren skriver east mens brugeren er i room1 så kommer man til room2.
+        room1.setRoomEast(room2);
+        room1.setRoomSouth(room4);
+        room2.setRoomWest(room1);
+        room2.setRoomEast(room3);
+        room3.setRoomWest(room2);
+        room3.setRoomSouth(room6);
+        room4.setRoomNorth(room1);
+        room4.setRoomSouth(room7);
+        room5.setRoomSouth(room8);
+        room6.setRoomNorth(room3);
+        room6.setRoomSouth(room9);
+        room7.setRoomNorth(room4);
+        room7.setRoomEast(room8);
+        room8.setRoomWest(room7);
+        room8.setRoomEast(room9);
+        room8.setRoomNorth(room5);
+        room9.setRoomWest(room8);
+        room9.setRoomNorth(room6);
+// Vi angiver hvor brugeren starter.
         currentRoom = room1;
 
 
     }
-
+// Her laver vi en metode for at brugeren kan bevæge sig fra rum til rum.
+    // Metoden siger, at hvis currentRoom (det rum man er i) ikke har en RoomNorth så returnerer metoden en boolean der er false
+    // Og ellers så bliver currentRoom til currentRoom's RoomNorth. Altså bevæger man sig fra rummet man er i til rummet nord fra det rum man var i.
+    // Denne metode gentages for alle retninger.
     public boolean goNorth() {
         if (currentRoom.getRoomNorth() == null) {
 
@@ -78,7 +81,7 @@ public class Adventure {
             return true;
         }
     }
-
+// Her laver vi en metode der hedder look som bare returnere rummets informationer. Vi printer metoden senere så brugeren kan få informationer omkring det rum man er i.
     public String look() {
         return currentRoom.getRoomNumber() + currentRoom.getRoomInfo();
     }
