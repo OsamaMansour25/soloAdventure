@@ -3,7 +3,6 @@ public class Room {
     // Vi laver roomNorth, roomSouth osv fordi at vi skal have en variabel der siger at hvis vi f.eks. er i rum 1, så er rum 2 den der er roomEast.
     // Altså hvis vi går east fra rum 1 så lander vi i rum 2 som befinder sig der.
     private Integer roomNumber;
-    private Room currentRoom;
     private String roomInfo;
     private Room roomNorth;
     private Room roomSouth;
