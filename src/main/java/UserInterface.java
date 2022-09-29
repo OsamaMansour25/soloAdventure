@@ -4,10 +4,13 @@ public class UserInterface {
 
     Scanner sc;
     private Player player;
+    Adventure ad;
 
     public UserInterface() {
         sc = new Scanner(System.in);
         player = new Player();
+        ad = new Adventure();
+
     }
 
     public void startGame() {
@@ -23,7 +26,7 @@ public class UserInterface {
             String userChoice = sc.nextLine().toLowerCase();
             switch (userChoice) {
                 case ("north"):
-                    boolean canGoNorth = player.goNorth();
+                    boolean canGoNorth = ad.goNorth();
                     if (canGoNorth) {
                         System.out.println("You have chosen to go north");
                         System.out.println(player.look());
@@ -32,7 +35,7 @@ public class UserInterface {
                         System.out.println("There is no room in this path");
                     }
                 case ("south"):
-                    boolean canGoSouth = player.goSouth();
+                    boolean canGoSouth = ad.goSouth();
                     if (canGoSouth) {
                         System.out.println("You have chosen to go south");
                         System.out.println(player.look());
@@ -42,7 +45,7 @@ public class UserInterface {
                     break;
 
                 case ("west"):
-                    boolean canGoWest = player.goWest();
+                    boolean canGoWest = ad.goWest();
                     if (canGoWest) {
                         System.out.println("You have chosen to go west");
                        System.out.println(player.look());
@@ -53,7 +56,7 @@ public class UserInterface {
 
                     break;
                 case ("east"):
-                    boolean canGoEast = player.goEast();
+                    boolean canGoEast = ad.goEast();
                     if (canGoEast) {
                         System.out.println("You have chosen to go east");
                         System.out.println(player.look());

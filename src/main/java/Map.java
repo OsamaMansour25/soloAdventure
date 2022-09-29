@@ -1,6 +1,5 @@
 public class Map {
-    Room currentRoom;
-    // Room startRoom;
+    private Room starterRoom;
 
     public Map() {
         // Vi opretter alle rummene med deres nummer og beskrivelse.
@@ -34,10 +33,13 @@ public class Map {
         room8.setRoomNorth(room5);
         room9.setRoomWest(room8);
         room9.setRoomNorth(room6);
-        currentRoom = room1;
-        // startRoom = room1;
+        this.starterRoom = room1;
 
 
+
+    }
+    public Room getStarterRoom() {
+        return starterRoom;
     }
 }
 

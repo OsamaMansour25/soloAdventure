@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c4487e9-39e0-472d-899d-fceec0528bd9" name="Changes" comment="Tilføjet kommentarer der forklarer processen bag koden, så jeg kan forstå det. UserInterface mangler kommentarer.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Binder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+    <list default="true" id="3c4487e9-39e0-472d-899d-fceec0528bd9" name="Changes" comment="Lavet en player class &amp; map class. Player classen sørger for de commands playeren kan foretage og dermed også bevæge sig mellem rummene. Map classen sørger for at binde alle rummene sammen og lave en map, dermed navnet.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +58,8 @@
       <workItem from="1664211792497" duration="3131000" />
       <workItem from="1664274769102" duration="8813000" />
       <workItem from="1664288029146" duration="1527000" />
-      <workItem from="1664350755011" duration="7818000" />
+      <workItem from="1664350755011" duration="8763000" />
+      <workItem from="1664451533179" duration="3373000" />
     </task>
     <task id="LOCAL-00001" summary="Begyndelse på adventure spillet">
       <created>1664214919990</created>
@@ -84,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664289546215</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Lavet en player class &amp; map class. Player classen sørger for de commands playeren kan foretage og dermed også bevæge sig mellem rummene. Map classen sørger for at binde alle rummene sammen og lave en map, dermed navnet.">
+      <created>1664359062534</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664359062534</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +110,18 @@
     <MESSAGE value="Begyndelse på adventure spillet" />
     <MESSAGE value="Tilføjet look metode. Tilføjet navigering (goWeast, goEast osv) Lavet et while loop rundt om startGame. Lavet mappen for rooms. Lavet en metode der printer rummets oplysninger, når man skifter rum." />
     <MESSAGE value="Tilføjet kommentarer der forklarer processen bag koden, så jeg kan forstå det. UserInterface mangler kommentarer." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet kommentarer der forklarer processen bag koden, så jeg kan forstå det. UserInterface mangler kommentarer." />
+    <MESSAGE value="Lavet en player class &amp; map class. Player classen sørger for de commands playeren kan foretage og dermed også bevæge sig mellem rummene. Map classen sørger for at binde alle rummene sammen og lave en map, dermed navnet." />
+    <option name="LAST_COMMIT_MESSAGE" value="Lavet en player class &amp; map class. Player classen sørger for de commands playeren kan foretage og dermed også bevæge sig mellem rummene. Map classen sørger for at binde alle rummene sammen og lave en map, dermed navnet." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Adventure.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
