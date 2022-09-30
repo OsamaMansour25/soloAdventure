@@ -1,9 +1,11 @@
 public class Player {
 
    private Room currentRoom;
+   private Map map;
 
     public Player() {
-
+        map = new Map();
+        setCurrentRoom(map.getStarterRoom());
 
     }
 
