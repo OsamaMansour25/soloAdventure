@@ -34,7 +34,15 @@ public class Map {
         room9.setRoomWest(room8);
         room9.setRoomNorth(room6);
         starterRoom = room1;
-
+        room1.items.add(new Items("Bright lamp"));
+        room2.items.add(new Items("lol"));
+        room3.items.add(new Items("Candle"));
+        room4.items.add(new Items("Map"));
+        room5.items.add(new Items("Samurai sword"));
+        room6.items.add(new Items("Samurai sword"));
+        room7.items.add(new Items("Elixir"));
+        room8.items.add(new Items("Golden key"));
+        room9.items.add(new Items("Old trophy"));
 
 
     }

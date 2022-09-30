@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c4487e9-39e0-472d-899d-fceec0528bd9" name="Changes" comment="Tilføjet help command">
+    <list default="true" id="3c4487e9-39e0-472d-899d-fceec0528bd9" name="Changes" comment="Fixet currentRoom ved at rykke til player. Ved ikke hvorfor det virkede.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Items.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
@@ -75,7 +74,7 @@
       <workItem from="1664288029146" duration="1527000" />
       <workItem from="1664350755011" duration="8763000" />
       <workItem from="1664451533179" duration="3720000" />
-      <workItem from="1664520418574" duration="8451000" />
+      <workItem from="1664520418574" duration="9073000" />
     </task>
     <task id="LOCAL-00001" summary="Begyndelse på adventure spillet">
       <created>1664214919990</created>
@@ -119,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664524865161</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixet currentRoom ved at rykke til player. Ved ikke hvorfor det virkede.">
+      <created>1664529324364</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664529324364</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +149,7 @@
     <MESSAGE value="Lavet en player class &amp; map class. Player classen sørger for de commands playeren kan foretage og dermed også bevæge sig mellem rummene. Map classen sørger for at binde alle rummene sammen og lave en map, dermed navnet." />
     <MESSAGE value="Flyttede goNorth, goSouth metoder til adventure og oprettet en starterRoom, samt flyttet currentRoomt til player. Der er noget galt med currentRoom" />
     <MESSAGE value="Tilføjet help command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet help command" />
+    <MESSAGE value="Fixet currentRoom ved at rykke til player. Ved ikke hvorfor det virkede." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixet currentRoom ved at rykke til player. Ved ikke hvorfor det virkede." />
   </component>
 </project>

@@ -29,7 +29,7 @@ public class UserInterface {
                     boolean canGoNorth = ad.goNorth();
                     if (canGoNorth) {
                         System.out.println("You have chosen to go north");
-                        System.out.println(player.look());
+                        System.out.println(player.look() + player.getCurrentRoom().getItems());
 
                     } else {
                         System.out.println("There is no room in this path");
@@ -38,7 +38,7 @@ public class UserInterface {
                     boolean canGoSouth = ad.goSouth();
                     if (canGoSouth) {
                         System.out.println("You have chosen to go south");
-                        System.out.println(player.look());
+                        System.out.println(player.look() + player.getCurrentRoom().getItems());
                     } else {
                         System.out.println("You cannot go this path");
                     }
@@ -48,7 +48,7 @@ public class UserInterface {
                     boolean canGoWest = ad.goWest();
                     if (canGoWest) {
                         System.out.println("You have chosen to go west");
-                        System.out.println(player.look());
+                        System.out.println(player.look() + player.getCurrentRoom().getItems());
 
                     } else {
                         System.out.println("You cannot go this path");
@@ -59,13 +59,13 @@ public class UserInterface {
                     boolean canGoEast = ad.goEast();
                     if (canGoEast) {
                         System.out.println("You have chosen to go east");
-                        System.out.println(player.look());
+                        System.out.println(player.look() + player.getCurrentRoom().getItems());
                     } else {
                         System.out.println("You cannot go this path");
                     }
                     break;
                 case ("look"):
-                    System.out.println(player.look());
+                    System.out.println(player.look() + player.getCurrentRoom().getItems());
                     break;
                 case ("exit"):
                     isRunning = false;
