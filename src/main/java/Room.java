@@ -10,7 +10,7 @@ public class Room {
     private Room roomSouth;
     private Room roomWest;
     private Room roomEast;
-    ArrayList<Items> items = new ArrayList();
+   private ArrayList<Items> items = new ArrayList();
 
     // Vi laver en constructor der hedder Room som indeholder både nummeret af rummet og også en beskrivelse af rummet.
     public Room(Integer roomNumber, String roomInfo) {

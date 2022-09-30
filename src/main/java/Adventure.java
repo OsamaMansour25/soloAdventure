@@ -24,6 +24,7 @@ public class Adventure {
             }
         }
 
+
         public boolean goWest() {
             if (player.getCurrentRoom().getRoomWest() == null) {
                 return false;
