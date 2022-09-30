@@ -48,7 +48,7 @@ public class UserInterface {
                     boolean canGoWest = ad.goWest();
                     if (canGoWest) {
                         System.out.println("You have chosen to go west");
-                       System.out.println(player.look());
+                        System.out.println(player.look());
 
                     } else {
                         System.out.println("You cannot go this path");
@@ -70,6 +70,12 @@ public class UserInterface {
                 case ("exit"):
                     isRunning = false;
                     break;
+                case ("commands"):
+                    System.out.println("""
+                            Movement commands: "north", "south", "east", "west"
+                            Other commands: "help" (prints available commands), "exit" (Quits the game), "look" (Repeats the description of the room).
+                                                       
+                            """);
 
 
             }

@@ -33,7 +33,7 @@ public class Map {
         room8.setRoomNorth(room5);
         room9.setRoomWest(room8);
         room9.setRoomNorth(room6);
-        this.starterRoom = room1;
+        starterRoom = room1;
 
 
 

@@ -40,7 +40,6 @@ public Integer getRoomNumber() {
     // Denne metode laver vi til hver retning vi har.
 public void setRoomNorth(Room room) {
     this.roomNorth = room;
-
 }
 public void setRoomSouth(Room room) {
     this.roomSouth = room;

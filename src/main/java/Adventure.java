@@ -17,7 +17,6 @@ public class Adventure {
         public boolean goNorth() {
 
             if (player.getCurrentRoom().getRoomNorth() == null) {
-
                 return false;
             } else {
                 player.setCurrentRoom(player.getCurrentRoom().getRoomNorth());
