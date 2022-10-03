@@ -1,9 +1,13 @@
+import java.util.ArrayList;
+
 public class Player {
 
-   private Room currentRoom;
-   private Map map;
+    private Room currentRoom;
+    private Map map;
+    private ArrayList<Items> inventory;
 
     public Player() {
+        inventory = new ArrayList<Items>();
         map = new Map();
         setCurrentRoom(map.getStarterRoom());
 
@@ -14,10 +18,52 @@ public class Player {
         return currentRoom.getRoomNumber() + currentRoom.getRoomInfo();
 
     }
+
     public Room getCurrentRoom() {
         return currentRoom;
     }
+
     public void setCurrentRoom(Room currentRoom) {
         this.currentRoom = currentRoom;
     }
+
+    public Items printInventory() {
+        for (Items item : inventory) {
+            return item;
+        }
+        return null;
+    }
+
+    public boolean takeItem(String itemName) {
+        boolean itemTaken = false;
+        Items item = currentRoom.searchItems(itemName);
+        if (item != null) {
+            inventory.add(item);
+            currentRoom.removeItem(item);
+            itemTaken = true;
+        }
+        return itemTaken;
+    }
+    public Items searchInventory(String itemName) {
+        for (Items n : inventory) {
+            if (n.getNameOfItem().equalsIgnoreCase(itemName)) {
+                return n;
+            }
+        }
+        return null;
+
+    }
+
+
+    public boolean dropItem(String itemName) {
+        boolean itemDropped = false;
+        Items item = searchInventory(itemName);
+        if (item != null) {
+            inventory.remove(item);
+            itemDropped = true;
+        }
+        return itemDropped;
+    }
 }
+
+

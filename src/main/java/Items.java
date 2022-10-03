@@ -1,5 +1,7 @@
 public class Items {
 
+
+
     private String nameOfItem;
 
     public Items(String nameOfItem) {
@@ -10,5 +12,9 @@ public class Items {
     {
         return nameOfItem;
     }
+    public String getNameOfItem() {
+        return nameOfItem;
+    }
+
 }
 

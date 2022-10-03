@@ -10,7 +10,7 @@ public class Room {
     private Room roomSouth;
     private Room roomWest;
     private Room roomEast;
-   private ArrayList<Items> items = new ArrayList();
+    private ArrayList<Items> items = new ArrayList();
 
     // Vi laver en constructor der hedder Room som indeholder både nummeret af rummet og også en beskrivelse af rummet.
     public Room(Integer roomNumber, String roomInfo) {
@@ -67,5 +67,25 @@ public class Room {
 
     public ArrayList<Items> getItems() {
         return items;
+    }
+
+    public void removeItem(Items item) {
+        int in = -1;
+        for (int n = 0; n < items.size(); n++) {
+            if (items.get(n) == item) {
+                in = n;
+            }
+            items.remove(in);
+        }
+    }
+
+    public Items searchItems(String itemName) {
+        for (Items n : items) {
+            if (n.getNameOfItem().equalsIgnoreCase(itemName)) {
+                return n;
+            }
+        }
+        return null;
+
     }
 }

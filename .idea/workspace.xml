@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c4487e9-39e0-472d-899d-fceec0528bd9" name="Changes" comment="Tilføjet items classen og tilføjet items til rummene">
+    <list default="true" id="3c4487e9-39e0-472d-899d-fceec0528bd9" name="Changes" comment="Gjort items private">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Binder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +75,8 @@
       <workItem from="1664288029146" duration="1527000" />
       <workItem from="1664350755011" duration="8763000" />
       <workItem from="1664451533179" duration="3720000" />
-      <workItem from="1664520418574" duration="10793000" />
+      <workItem from="1664520418574" duration="19615000" />
+      <workItem from="1664779369678" duration="8938000" />
     </task>
     <task id="LOCAL-00001" summary="Begyndelse på adventure spillet">
       <created>1664214919990</created>
@@ -131,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664529877975</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Gjort items private">
+      <created>1664531752714</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664531752714</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +167,7 @@
     <MESSAGE value="Tilføjet help command" />
     <MESSAGE value="Fixet currentRoom ved at rykke til player. Ved ikke hvorfor det virkede." />
     <MESSAGE value="Tilføjet items classen og tilføjet items til rummene" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet items classen og tilføjet items til rummene" />
+    <MESSAGE value="Gjort items private" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gjort items private" />
   </component>
 </project>

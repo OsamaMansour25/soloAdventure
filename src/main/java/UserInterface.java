@@ -70,12 +70,39 @@ public class UserInterface {
                 case ("exit"):
                     isRunning = false;
                     break;
+
+                case ("take"):
+                    System.out.println("Which item do you want to pickup?");
+                    String takeItem = sc.nextLine();
+                    boolean itemTaken = player.takeItem(takeItem);
+                    if (itemTaken == true) {
+                        System.out.println("You have taken " + takeItem);
+                    }
+                        else {
+                        System.out.println("There is no such item in this room"); }
+                        break;
+
+                case("drop"):
+                    System.out.println("Which item do you want to drop?");
+                    String dropItem = sc.nextLine();
+                    boolean itemDropped = player.dropItem(dropItem);
+                    if (itemDropped == true) {
+                        System.out.println("You have dropped" + dropItem);
+                    }
+                    else {
+                        System.out.println("You don't have this item"); }
+                    break;
+
+                case ("inventory"):
+                    System.out.println(player.printInventory());
+                    break;
                 case ("commands"):
                     System.out.println("""
                             Movement commands: "north", "south", "east", "west"
                             Other commands: "help" (prints available commands), "exit" (Quits the game), "look" (Repeats the description of the room).
                                                        
                             """);
+                    break;
 
 
             }
