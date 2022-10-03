@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Player {
-
+private Integer health = 100;
     private Room currentRoom;
     private Map map;
     private ArrayList<Items> inventory;
@@ -63,6 +63,9 @@ public class Player {
             itemDropped = true;
         }
         return itemDropped;
+    }
+    public Integer gethealth() {
+       return health;
     }
 }
 

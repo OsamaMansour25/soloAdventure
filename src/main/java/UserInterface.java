@@ -104,6 +104,25 @@ public class UserInterface {
                             """);
                     break;
 
+                case("health"):
+                    Integer health = player.gethealth();
+                    if(health > 0 && 25 >= health) {
+                        System.out.println("Your health is" + health + "You are low in hp. Avoid fights and get food");
+                    }
+                    if(health > 25 && 50 >= health) {
+                        System.out.println("Your health is" + health + "You are kinda low, be careful with fights and get food");
+                    }
+                    if(health > 50 && 75 >= health) {
+                        System.out.println("Your health is" + health + "You are good on health, you can take fights, but avoid taking too much damage");
+                    }
+                    if(health > 75 && 100 > health) {
+                        System.out.println("Your health is" + health + "You are almost at full health points");
+                    }
+                    if(health == 100) {
+                        System.out.println("You are at full hp");
+                    }
+                    break;
+
 
             }
 

@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c4487e9-39e0-472d-899d-fceec0528bd9" name="Changes" comment="Gjort items private">
+    <list default="true" id="3c4487e9-39e0-472d-899d-fceec0528bd9" name="Changes" comment="Lavet en search, take og drop funktion der virker. Del 2, færdiggjort.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Binder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Items.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +74,7 @@
       <workItem from="1664350755011" duration="8763000" />
       <workItem from="1664451533179" duration="3720000" />
       <workItem from="1664520418574" duration="19615000" />
-      <workItem from="1664779369678" duration="8938000" />
+      <workItem from="1664779369678" duration="10792000" />
     </task>
     <task id="LOCAL-00001" summary="Begyndelse på adventure spillet">
       <created>1664214919990</created>
@@ -141,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664531752714</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Lavet en search, take og drop funktion der virker. Del 2, færdiggjort.">
+      <created>1664788377572</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664788377572</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +173,7 @@
     <MESSAGE value="Fixet currentRoom ved at rykke til player. Ved ikke hvorfor det virkede." />
     <MESSAGE value="Tilføjet items classen og tilføjet items til rummene" />
     <MESSAGE value="Gjort items private" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gjort items private" />
+    <MESSAGE value="Lavet en search, take og drop funktion der virker. Del 2, færdiggjort." />
+    <option name="LAST_COMMIT_MESSAGE" value="Lavet en search, take og drop funktion der virker. Del 2, færdiggjort." />
   </component>
 </project>
