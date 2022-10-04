@@ -70,13 +70,7 @@ public class Room {
     }
 
     public void removeItem(Items item) {
-        int in = -1;
-        for (int n = 0; n < items.size(); n++) {
-            if (items.get(n) == item) {
-                in = n;
-            }
-            items.remove(in);
-        }
+        items.remove(item);
     }
 
     public Items searchItems(String itemName) {

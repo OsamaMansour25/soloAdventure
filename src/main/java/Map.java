@@ -1,5 +1,8 @@
+import java.util.ArrayList;
+
 public class Map {
     private Room starterRoom;
+    private ArrayList<Items> products = new ArrayList<>();
 
     public Map() {
         // Vi opretter alle rummene med deres nummer og beskrivelse.
@@ -34,6 +37,8 @@ public class Map {
         room9.setRoomWest(room8);
         room9.setRoomNorth(room6);
         starterRoom = room1;
+
+        // Items
         room1.getItems().add(new Items("Bright lamp"));
         room2.getItems().add(new Items("lol"));
         room3.getItems().add(new Items("Candle"));
@@ -44,10 +49,17 @@ public class Map {
         room8.getItems().add(new Items("Golden key"));
         room9.getItems().add(new Items("Old trophy"));
 
+        // Food
+        room1.getItems().add(new Food("Apple"));
+
+
 
     }
     public Room getStarterRoom() {
         return starterRoom;
+    }
+    public ArrayList<Items> getProducts() {
+        return products;
     }
 }
 

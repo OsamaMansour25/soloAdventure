@@ -6,6 +6,7 @@ public class Items {
 
     public Items(String nameOfItem) {
         this.nameOfItem = nameOfItem;
+
     }
 
     public String toString()

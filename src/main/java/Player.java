@@ -7,7 +7,7 @@ private Integer health = 100;
     private ArrayList<Items> inventory;
 
     public Player() {
-        inventory = new ArrayList<Items>();
+        inventory = new ArrayList<>();
         map = new Map();
         setCurrentRoom(map.getStarterRoom());
 
@@ -27,11 +27,9 @@ private Integer health = 100;
         this.currentRoom = currentRoom;
     }
 
-    public Items printInventory() {
-        for (Items item : inventory) {
-            return item;
-        }
-        return null;
+    public String printInventory() {
+
+        return inventory.toString();
     }
 
     public boolean takeItem(String itemName) {

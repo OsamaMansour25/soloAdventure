@@ -1,4 +1,12 @@
-public class Food {
-    Items food = new Items("food");
+public class Food extends Items{
+
+  public Food(String description) {
+      super(description);
+
+  }
+  public String toString() {
+      return getNameOfItem();
+
+  }
 }
 
