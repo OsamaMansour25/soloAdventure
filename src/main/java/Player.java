@@ -7,6 +7,7 @@ public class Player {
     private ArrayList<Items> inventory;
     private ArrayList<Food> food;
     private Weapons equippedWeapon;
+    private Integer ammo;
 
     public Player() {
         inventory = new ArrayList<>();
@@ -47,6 +48,9 @@ public class Player {
             inventory.add(item);
             currentRoom.removeItem(item);
             itemTaken = true;
+            if(item instanceof RangedWeapon) {
+                ammo = 1;
+            }
         }
         return itemTaken;
     }
@@ -65,9 +69,10 @@ public class Player {
 
     }
     public AttackEnum Attack(String itemName) {
-        if(equippedWeapon == null) {
-            return AttackEnum.NO_WEAPON;
-        } else if(equippedWeapon instanceof RangedWeapon) {
+        if(!(equippedWeapon instanceof Weapons)) {
+            return AttackEnum.NO_WEAPON_EQUIPPIED;
+        } else if(equippedWeapon instanceof RangedWeapon && ammo > 0) {
+            ammo = 0;
             return AttackEnum.FIRED;
         } else if(equippedWeapon instanceof MeleeWeapon) {
             return AttackEnum.ATTACKED;
@@ -145,7 +150,12 @@ public void setHealth(Items item) {
             health = 100;
         }
 }
-
+public Integer getAmmo() {
+        return ammo;
+}
+public Weapons getEquippedWeapon() {
+        return equippedWeapon;
+}
 }
     /* TODO: Health editor, fjern hp eller tilføj hp når du spiser
     public boolean editsHp(String itemName) {

@@ -160,9 +160,17 @@ public class UserInterface {
                         case FIRED:
                             System.out.println("You have fired your weapon!");
                             break;
-                        case ATTACKED:
+                        case MELEE:
                             System.out.println("You have swung and attacked with your weapon");
                             break;
+                        case NO_AMMO:
+                            if(player.getAmmo() == 0) {
+                                System.out.println("You don't have ammo to fire this weapon");
+                            }
+                        case NO_WEAPON_EQUIPPIED:
+                            if(player.getEquippedWeapon() == null) {
+                                System.out.println("You don't have a weapon equipped");
+                            }
                     }
                     break;
 
