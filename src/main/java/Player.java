@@ -75,7 +75,7 @@ public class Player {
             ammo = 0;
             return AttackEnum.FIRED;
         } else if(equippedWeapon instanceof MeleeWeapon) {
-            return AttackEnum.ATTACKED;
+            return AttackEnum.MELEE;
         }
         else return AttackEnum.NO_WEAPON;
     }
