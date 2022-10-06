@@ -111,9 +111,8 @@ public class UserInterface {
                    // boolean canEat = player.eatItemFromInv();
                     //boolean canConsume = player.eatItemFromRoom(userChoice);
                     System.out.println("What would you like to consume?");
-                    String canConsume = sc.nextLine();
                    // boolean foodConsumed = player.eatItemFromRoom(canConsume);
-                   FoodEnum isFood = player.consumeFood(userChoice);
+                   FoodEnum isFood = player.consumeFood(sc.nextLine());
                    switch (isFood)
                    {
                        case FOOD:
@@ -129,6 +128,44 @@ public class UserInterface {
                            System.out.println(isFood + " is not food");
                            break;
                    }
+                   break;
+                case("equip"):
+                    System.out.println("Here is your inventory");
+                    System.out.println(player.printInventory());
+                    System.out.println("What weapon would you like to equip?");
+                    WeaponEnum isWeapon = player.equipWeapon(sc.nextLine());
+                    switch (isWeapon)
+                    {
+                        case WEAPON:
+                            System.out.println("You have equipped" + isWeapon);
+                            break;
+                        case NOT_FOUND:
+                            System.out.println("Could not find " + isWeapon + " In your inventory");
+                            break;
+                        case NOT_WEAPON:
+                            System.out.println("You cannot equip" + isWeapon + " it is not a weapon");
+                            break;
+                    }
+                    break;
+
+                case"attack", "fire":
+                    System.out.println(player.printInventory());
+                    System.out.println("What weapon would you like to fire with?");
+                    AttackEnum canAttack = player.Attack(sc.nextLine());
+                    switch (canAttack)
+                    {
+                        case NO_WEAPON:
+                            System.out.println("You cannot attack, because you don't have a weapon");
+                            break;
+                        case FIRED:
+                            System.out.println("You have fired your weapon!");
+                            break;
+                        case ATTACKED:
+                            System.out.println("You have swung and attacked with your weapon");
+                            break;
+                    }
+                    break;
+
 
 
                 case("health"):

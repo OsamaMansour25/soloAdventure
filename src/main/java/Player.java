@@ -6,6 +6,7 @@ public class Player {
     private Map map;
     private ArrayList<Items> inventory;
     private ArrayList<Food> food;
+    private Weapons equippedWeapon;
 
     public Player() {
         inventory = new ArrayList<>();
@@ -24,6 +25,10 @@ public class Player {
 
     public Room getCurrentRoom() {
         return currentRoom;
+    }
+
+    public void setEquippedWeapon(Weapons equippedWeapon) {
+        this.equippedWeapon = equippedWeapon;
     }
 
     public void setCurrentRoom(Room currentRoom) {
@@ -45,8 +50,10 @@ public class Player {
         }
         return itemTaken;
     }
-public void removeItemFromInventory(Items item) {
-    inventory.remove(item); }
+
+    public void removeItemFromInventory(Items item) {
+        inventory.remove(item);
+    }
 
     public Items searchInventory(String itemName) {
         for (Items n : inventory) {
@@ -57,6 +64,31 @@ public void removeItemFromInventory(Items item) {
         return null;
 
     }
+    public AttackEnum Attack(String itemName) {
+        if(equippedWeapon == null) {
+            return AttackEnum.NO_WEAPON;
+        } else if(equippedWeapon instanceof RangedWeapon) {
+            return AttackEnum.FIRED;
+        } else if(equippedWeapon instanceof MeleeWeapon) {
+            return AttackEnum.ATTACKED;
+        }
+        else return AttackEnum.NO_WEAPON;
+    }
+
+
+    public WeaponEnum equipWeapon(String itemName) {
+        Weapons equipWeapons = (Weapons) searchInventory(itemName);
+        if (equipWeapons == null) {
+            return WeaponEnum.NOT_FOUND;
+        } else if (equipWeapons instanceof Weapons) {
+            currentRoom.removeItem(equipWeapons);
+            setEquippedWeapon(equipWeapons);
+            return WeaponEnum.WEAPON;
+
+        } else
+            return WeaponEnum.NOT_FOUND;
+    }
+
 
 
     public boolean dropItem(String itemName) {
