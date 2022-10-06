@@ -1,15 +1,18 @@
 import java.util.ArrayList;
 
 public class Player {
-private Integer health = 100;
+    private Integer health = 100;
     private Room currentRoom;
     private Map map;
     private ArrayList<Items> inventory;
+    private ArrayList<Food> food;
 
     public Player() {
         inventory = new ArrayList<>();
         map = new Map();
         setCurrentRoom(map.getStarterRoom());
+        food = new ArrayList<>();
+
 
     }
 
@@ -42,6 +45,9 @@ private Integer health = 100;
         }
         return itemTaken;
     }
+public void removeItemFromInventory(Items item) {
+    inventory.remove(item); }
+
     public Items searchInventory(String itemName) {
         for (Items n : inventory) {
             if (n.getNameOfItem().equalsIgnoreCase(itemName)) {
@@ -62,9 +68,59 @@ private Integer health = 100;
         }
         return itemDropped;
     }
-    public Integer gethealth() {
-       return health;
+    public FoodEnum consumeFood(String itemName) {
+        Items consumeItem = searchInventory(itemName);
+        if (consumeItem == null) {
+            return FoodEnum.NOT_FOUND;
+
+        } else if (consumeItem instanceof Food) {
+            setHealth(consumeItem);
+            removeItemFromInventory(consumeItem);
+            return FoodEnum.FOOD;
+        } else
+            return FoodEnum.NOT_FOOD;
+    /* TODO: Find ud af hvorfor den ikke fjerner item
+    public boolean eatItemFromInv(String itemName) {
+        boolean itemConsumed = false;
+        Items item = searchInventory(itemName);
+        if (item instanceof Food) {
+            inventory.remove(item);
+            itemConsumed = true;
+        }
+        return itemConsumed;
     }
+// TODO: Find ud af hvorfor den ikke fjerner item
+    public boolean eatItemFromRoom(String itemName) {
+        boolean itemConsumed = false;
+        Items item = currentRoom.searchItems(itemName);
+        if (item instanceof Food) {
+            currentRoom.getItems().remove(itemName);
+            itemConsumed = true;
+        }
+        return itemConsumed;
+    } */
+    }
+
+    public Integer gethealth() {
+        return health;
+    }
+
+public void setHealth(Items item) {
+        if (item instanceof Food) {
+            this.health += 20;
+        }
+        if (health > 100) {
+            health = 100;
+        }
 }
 
+}
+    /* TODO: Health editor, fjern hp eller tilføj hp når du spiser
+    public boolean editsHp(String itemName) {
+        boolean editsHp = false;
+        Items item = searchInventory(itemName);
+        if(item instanceof Food);
+        health =
+    }
 
+    */

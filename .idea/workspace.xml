@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c4487e9-39e0-472d-899d-fceec0528bd9" name="Changes" comment="Lavet en search, take og drop funktion der virker. Del 2, færdiggjort.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/FoodEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Items.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -78,6 +81,8 @@
       <workItem from="1664520418574" duration="19615000" />
       <workItem from="1664779369678" duration="10792000" />
       <workItem from="1664884571766" duration="6149000" />
+      <workItem from="1664894411358" duration="6431000" />
+      <workItem from="1665054702840" duration="1282000" />
     </task>
     <task id="LOCAL-00001" summary="Begyndelse på adventure spillet">
       <created>1664214919990</created>

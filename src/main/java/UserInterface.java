@@ -11,6 +11,7 @@ public class UserInterface {
         player = new Player();
         ad = new Adventure();
 
+
     }
 
     public void startGame() {
@@ -103,6 +104,32 @@ public class UserInterface {
                                                        
                             """);
                     break;
+
+                case("consume"):
+                    System.out.println("Here is your inventory");
+                    System.out.println(player.printInventory());
+                   // boolean canEat = player.eatItemFromInv();
+                    //boolean canConsume = player.eatItemFromRoom(userChoice);
+                    System.out.println("What would you like to consume?");
+                    String canConsume = sc.nextLine();
+                   // boolean foodConsumed = player.eatItemFromRoom(canConsume);
+                   FoodEnum isFood = player.consumeFood(userChoice);
+                   switch (isFood)
+                   {
+                       case FOOD:
+                           System.out.println("You have consumed " + isFood + " and it has been removed from your inventory");
+                       System.out.println("Your health is" + player.gethealth());
+                       break;
+
+                       case NOT_FOUND:
+                           System.out.println(isFood + " is not in your inventory");
+                           break;
+
+                       case NOT_FOOD:
+                           System.out.println(isFood + " is not food");
+                           break;
+                   }
+
 
                 case("health"):
                     Integer health = player.gethealth();
