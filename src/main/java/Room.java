@@ -72,7 +72,9 @@ public class Room {
     public void removeItem(Items item) {
         items.remove(item);
     }
-
+public void addItem(Items item) {
+        items.add(item);
+}
     public Items searchItems(String itemName) {
         for (Items n : items) {
             if (n.getNameOfItem().equalsIgnoreCase(itemName)) {

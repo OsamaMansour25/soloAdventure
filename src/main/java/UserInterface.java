@@ -167,7 +167,7 @@ public class UserInterface {
                             if(player.getAmmo() == 0) {
                                 System.out.println("You don't have ammo to fire this weapon");
                             }
-                        case NO_WEAPON_EQUIPPIED:
+                        case NO_WEAPON_EQUIPPED:
                             if(player.getEquippedWeapon() == null) {
                                 System.out.println("You don't have a weapon equipped");
                             }

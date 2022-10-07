@@ -70,7 +70,7 @@ public class Player {
     }
     public AttackEnum Attack(String itemName) {
         if(!(equippedWeapon instanceof Weapons)) {
-            return AttackEnum.NO_WEAPON_EQUIPPIED;
+            return AttackEnum.NO_WEAPON_EQUIPPED;
         } else if(equippedWeapon instanceof RangedWeapon && ammo > 0) {
             ammo = 0;
             return AttackEnum.FIRED;
@@ -103,6 +103,7 @@ public class Player {
         Items item = searchInventory(itemName);
         if (item != null) {
             inventory.remove(item);
+            currentRoom.addItem(item);
             itemDropped = true;
         }
         return itemDropped;
