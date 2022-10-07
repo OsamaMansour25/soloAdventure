@@ -149,14 +149,9 @@ public class UserInterface {
                     break;
 
                 case"attack", "fire":
-                    System.out.println(player.printInventory());
-                    System.out.println("What weapon would you like to fire with?");
-                    AttackEnum canAttack = player.Attack(sc.nextLine());
-                    switch (canAttack)
+                    AttackEnum attack = player.attack();
+                    switch (attack)
                     {
-                        case NO_WEAPON:
-                            System.out.println("You cannot attack, because you don't have a weapon");
-                            break;
                         case FIRED:
                             System.out.println("You have fired your weapon!");
                             break;
@@ -164,12 +159,11 @@ public class UserInterface {
                             System.out.println("You have swung and attacked with your weapon");
                             break;
                         case NO_AMMO:
-                            if(player.getAmmo() == 0) {
                                 System.out.println("You don't have ammo to fire this weapon");
-                            }
                         case NO_WEAPON_EQUIPPED:
                             if(player.getEquippedWeapon() == null) {
                                 System.out.println("You don't have a weapon equipped");
+                                break;
                             }
                     }
                     break;

@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c4487e9-39e0-472d-899d-fceec0528bd9" name="Changes" comment="Lavet equip funktion og attack funktion. Mangler at tilføje at der SKAL være ammo før man kan affyre">
+    <list default="true" id="3c4487e9-39e0-472d-899d-fceec0528bd9" name="Changes" comment="Tilføjet en funktion der tilføjer item til rummet efter man dropper fra inventory">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AttackEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AttackEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Weapons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Weapons.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +82,8 @@
       <workItem from="1664894411358" duration="6431000" />
       <workItem from="1665054702840" duration="9347000" />
       <workItem from="1665124149803" duration="1016000" />
+      <workItem from="1665125200389" duration="8602000" />
+      <workItem from="1665134451097" duration="1770000" />
     </task>
     <task id="LOCAL-00001" summary="Begyndelse på adventure spillet">
       <created>1664214919990</created>
@@ -165,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665060925234</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Tilføjet en funktion der tilføjer item til rummet efter man dropper fra inventory">
+      <created>1665125495166</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1665125495166</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +206,7 @@
     <MESSAGE value="Lavet en search, take og drop funktion der virker. Del 2, færdiggjort." />
     <MESSAGE value="Lavet eat funktionen færdigt og oprettet FoodEnum" />
     <MESSAGE value="Lavet equip funktion og attack funktion. Mangler at tilføje at der SKAL være ammo før man kan affyre" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lavet equip funktion og attack funktion. Mangler at tilføje at der SKAL være ammo før man kan affyre" />
+    <MESSAGE value="Tilføjet en funktion der tilføjer item til rummet efter man dropper fra inventory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet en funktion der tilføjer item til rummet efter man dropper fra inventory" />
   </component>
 </project>

@@ -7,7 +7,6 @@ public class Player {
     private ArrayList<Items> inventory;
     private ArrayList<Food> food;
     private Weapons equippedWeapon;
-    private Integer ammo;
 
     public Player() {
         inventory = new ArrayList<>();
@@ -48,10 +47,8 @@ public class Player {
             inventory.add(item);
             currentRoom.removeItem(item);
             itemTaken = true;
-            if(item instanceof RangedWeapon) {
-                ammo = 1;
+
             }
-        }
         return itemTaken;
     }
 
@@ -68,18 +65,11 @@ public class Player {
         return null;
 
     }
-    public AttackEnum Attack(String itemName) {
-        if(!(equippedWeapon instanceof Weapons)) {
-            return AttackEnum.NO_WEAPON_EQUIPPED;
-        } else if(equippedWeapon instanceof RangedWeapon && ammo > 0) {
-            ammo = 0;
-            return AttackEnum.FIRED;
-        } else if(equippedWeapon instanceof MeleeWeapon) {
-            return AttackEnum.MELEE;
-        } else if(ammo == 0) {
-            return AttackEnum.NO_AMMO;
+    public AttackEnum attack() {
+        if(equippedWeapon instanceof Weapons) {
+            return equippedWeapon.attack();
         }
-        else return AttackEnum.NO_WEAPON;
+        else return AttackEnum.NO_WEAPON_EQUIPPED;
     }
 
 
@@ -152,9 +142,6 @@ public void setHealth(Items item) {
         if (health > 100) {
             health = 100;
         }
-}
-public Integer getAmmo() {
-        return ammo;
 }
 public Weapons getEquippedWeapon() {
         return equippedWeapon;
