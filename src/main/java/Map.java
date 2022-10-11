@@ -38,20 +38,26 @@ public class Map {
         starterRoom = room1;
 
         // Items
-        room1.getItems().add(new RangedWeapon("gun"));
+        room1.getItems().add(new RangedWeapon("gun", 30));
         room1.getItems().add(new Ammunition("gunpowder"));
         room1.getItems().add(new Items("Bright lamp"));
         room2.getItems().add(new Items("lol"));
         room3.getItems().add(new Items("Candle"));
         room4.getItems().add(new Items("Map"));
-        room5.getItems().add(new MeleeWeapon("Samurai sword"));
-        room6.getItems().add(new RangedWeapon("Gun"));
+        room5.getItems().add(new MeleeWeapon("Samurai sword", 40));
+        room6.getItems().add(new RangedWeapon("Gun", 30));
         room7.getItems().add(new Items("Elixir"));
         room8.getItems().add(new Items("Golden key"));
         room9.getItems().add(new Items("Old trophy"));
 
         // Food
         room1.getItems().add(new Food("Apple", +10));
+
+        // Enemies weapon
+        MeleeWeapon sword = new MeleeWeapon("sword", 30);
+
+        // Enemies
+        room1.getEnemy().add(new Enemy("Skeleton", 30, sword));
 
 
 

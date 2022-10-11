@@ -11,6 +11,7 @@ public class Room {
     private Room roomWest;
     private Room roomEast;
     private ArrayList<Items> items = new ArrayList();
+    private ArrayList<Enemy> enemy = new ArrayList<>();
 
     // Vi laver en constructor der hedder Room som indeholder både nummeret af rummet og også en beskrivelse af rummet.
     public Room(Integer roomNumber, String roomInfo) {
@@ -67,6 +68,9 @@ public class Room {
 
     public ArrayList<Items> getItems() {
         return items;
+    }
+    public ArrayList<Enemy> getEnemy() {
+        return enemy;
     }
 
     public void removeItem(Items item) {

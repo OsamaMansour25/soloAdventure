@@ -1,7 +1,7 @@
 public class RangedWeapon extends Weapons{
     Integer ammo = 1;
-    public RangedWeapon(String description) {
-        super(description);
+    public RangedWeapon(String description, Integer damage) {
+        super(description, damage);
     }
 
     @Override

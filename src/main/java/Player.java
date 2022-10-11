@@ -7,12 +7,14 @@ public class Player {
     private ArrayList<Items> inventory;
     private ArrayList<Food> food;
     private Weapons equippedWeapon;
+    private Enemy currentEnemy;
 
     public Player() {
         inventory = new ArrayList<>();
         map = new Map();
         setCurrentRoom(map.getStarterRoom());
         food = new ArrayList<>();
+
 
 
     }
@@ -60,26 +62,35 @@ public class Player {
         for (Items n : inventory) {
             if (n.getNameOfItem().equalsIgnoreCase(itemName)) {
                 return n;
+
             }
         }
         return null;
 
     }
     public AttackEnum attack() {
-        if(equippedWeapon instanceof Weapons) {
+        if (equippedWeapon instanceof Weapons) {
+            currentEnemy.setHealth(currentEnemy.getHealth()- equippedWeapon.getDamage());
             return equippedWeapon.attack();
+        } else if (currentRoom.getEnemy() != null) {
+            currentEnemy.attack();
+            health = health - equippedWeapon.getDamage();
+            return AttackEnum.ENEMY_ATTACKED;
+
         }
+
+
         else return AttackEnum.NO_WEAPON_EQUIPPED;
     }
 
 
     public WeaponEnum equipWeapon(String itemName) {
-        Weapons equipWeapons = (Weapons) searchInventory(itemName);
+        Items equipWeapons = searchInventory(itemName);
         if (equipWeapons == null) {
             return WeaponEnum.NOT_FOUND;
         } else if (equipWeapons instanceof Weapons) {
             currentRoom.removeItem(equipWeapons);
-            setEquippedWeapon(equipWeapons);
+            setEquippedWeapon((Weapons) equipWeapons);
             return WeaponEnum.WEAPON;
 
         } else

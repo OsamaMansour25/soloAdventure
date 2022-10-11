@@ -12,6 +12,7 @@ public class UserInterface {
         ad = new Adventure();
 
 
+
     }
 
     public void startGame() {
@@ -154,6 +155,7 @@ public class UserInterface {
                     {
                         case FIRED:
                             System.out.println("You have fired your weapon!");
+
                             break;
                         case MELEE:
                             System.out.println("You have swung and attacked with your weapon");
