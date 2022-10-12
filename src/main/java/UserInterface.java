@@ -153,9 +153,18 @@ public class UserInterface {
                     AttackEnum attack = player.attack();
                     switch (attack)
                     {
+                        case PLAYER_DEFEATED:
+                            System.out.println("You have been slain. Game over");
+                            isRunning = false;
+                            break;
+                        case ENEMY_DEFEATED:
+                            System.out.println("You have slain an enemy! They dropped their item on the ground " +
+                                    "and disappeared from the room");
+                            break;
+                        case ENEMY_ATTACKED:
+                            System.out.println("An enemy has attacked you! Your hp is " + player.gethealth());
                         case FIRED:
                             System.out.println("You have fired your weapon!");
-
                             break;
                         case MELEE:
                             System.out.println("You have swung and attacked with your weapon");

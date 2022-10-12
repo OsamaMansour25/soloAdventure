@@ -79,6 +79,10 @@ public class Room {
 public void addItem(Items item) {
         items.add(item);
 }
+// TODO: Ikke overskud til at finde ud af hvordan enemy dropper item til room. Nok samme metode som drop metode i player
+public void addItemFromEnemy(Enemy enemy) {
+
+}
     public Items searchItems(String itemName) {
         for (Items n : items) {
             if (n.getNameOfItem().equalsIgnoreCase(itemName)) {

@@ -3,5 +3,7 @@ public enum AttackEnum {
     FIRED,
     NO_AMMO,
     NO_WEAPON_EQUIPPED,
-    ENEMY_ATTACKED
+    ENEMY_ATTACKED,
+    ENEMY_DEFEATED,
+    PLAYER_DEFEATED
 }

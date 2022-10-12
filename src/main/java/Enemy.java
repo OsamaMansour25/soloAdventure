@@ -6,6 +6,8 @@ public class Enemy {
     private Weapons weapon;
     private String description;
     private ArrayList<Enemy> enemy = new ArrayList<>();
+    private Player player;
+    private Room currentRoom;
 
     public Enemy(String description, Integer health, Weapons meleeWeapon) {
         this.description = description;
@@ -26,5 +28,15 @@ public class Enemy {
     public void setHealth(Integer health) {
         this.health = health;
 
+    }
+    public void enemyDefeated() {
+        if (health <= 0) {
+            removeEnemy(player.getCurrentEnemy());
+
+        }
+
+    }
+    public void removeEnemy(Enemy enemy) {
+        getEnemy().remove(currentRoom.getEnemy().remove(enemy));
     }
 }

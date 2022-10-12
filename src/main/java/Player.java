@@ -77,9 +77,12 @@ public class Player {
             health = health - equippedWeapon.getDamage();
             return AttackEnum.ENEMY_ATTACKED;
 
+        } else if(currentEnemy.getHealth() <= 0) {
+            currentEnemy.enemyDefeated();
+            return AttackEnum.ENEMY_DEFEATED;
+        } else if(health <= 0) {
+            return AttackEnum.PLAYER_DEFEATED;
         }
-
-
         else return AttackEnum.NO_WEAPON_EQUIPPED;
     }
 
@@ -142,6 +145,7 @@ public class Player {
     } */
     }
 
+
     public Integer gethealth() {
         return health;
     }
@@ -157,6 +161,10 @@ public void setHealth(Items item) {
 public Weapons getEquippedWeapon() {
         return equippedWeapon;
 }
+public Enemy getCurrentEnemy() {
+        return currentEnemy;
+}
+
 }
     /* TODO: Health editor, fjern hp eller tilføj hp når du spiser
     public boolean editsHp(String itemName) {
